@@ -1,0 +1,23 @@
+<div class="flex flex-row flex-wrap gap-4 p-8">
+  @for (d of organizations(); track d) {
+  <mat-card class="max-w-xs">
+    <mat-card-header>
+      <!-- <div mat-card-avatar class=""></div> -->
+      <mat-card-title>{{ d.name }}</mat-card-title>
+      <mat-card-subtitle>{{ d.description }}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image class="cursor-pointer w-64" [src]="matIconUrl(d.logo || 'agriculture')"
+      [alt]="d.name + ' icon'" [routerLink]="[d.id]">
+    <!-- <mat-card-content>
+      <p>
+        {{ d.description }}
+      </p>
+    </mat-card-content> -->
+    <mat-card-actions>
+      <button mat-button>LIKE</button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions>
+  </mat-card>
+  }
+
+</div>

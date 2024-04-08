@@ -1,0 +1,119 @@
+<section class="mb-32">
+  <mat-toolbar class="flex">
+    <mat-form-field style="padding: 1.5rem 0.25rem 0"
+      [ngClass]="{'flex-grow': !(isHandset() || isTablet()), 'w-36': isHandset() || isTablet()}">
+      <mat-label>Search</mat-label>
+      <input class="w-full" matInput [formControl]="searchTerm" placeholder="Search for charts...">
+      <button mat-icon-button *ngIf="searchTerm.value" matSuffix aria-label="Clear" (click)="searchTerm.reset()">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+
+    <!-- This span can be used as a spacer or removed if not needed -->
+    <span [ngClass]="{'ml-auto': !(isHandset() || isTablet())}"></span>
+
+    <mat-button-toggle-group name="view-toggle-group" aria-label="select list or grid view" [(ngModel)]="viewMode"
+      [ngClass]="{'w-28': isHandset() || isTablet()}">
+      <mat-button-toggle value="grid_view"><mat-icon>grid_view</mat-icon></mat-button-toggle>
+      <mat-button-toggle value="list"><mat-icon>list</mat-icon></mat-button-toggle>
+    </mat-button-toggle-group>
+
+    <mat-form-field style="padding: 1.5rem 0.25rem 0" [ngClass]="{'w-28': isHandset() || isTablet()}">
+      <mat-label>Farm</mat-label>
+      <mat-select [(value)]="selectedFarm" (selectionChange)="onFarmChange()">
+        <ng-container *ngFor="let farm of farms()">
+          <mat-option [value]="farm">{{ farm.name }}</mat-option>
+        </ng-container>
+      </mat-select>
+    </mat-form-field>
+  </mat-toolbar>
+
+  @if(assets()) {
+  @if(viewMode === 'grid_view') {
+  <div class="flex flex-row flex-wrap gap-4 p-8 center">
+    @for (d of assets(); track d) {
+    <mat-card class="w-72 pb-2">
+      <mat-card-header class="h-24">
+        <div mat-card-avatar class="farm-avatar"
+          style="background-size: cover; background-image: url('https://fonts.gstatic.com/s/i/short-term/release/materialsymbolsoutlined/agriculture/default/48px.svg');">
+        </div>
+        <mat-card-title>{{ d.name }}</mat-card-title>
+        <mat-card-subtitle>{{ d.description }}</mat-card-subtitle>
+      </mat-card-header>
+      <div class="w-full center">
+        <img mat-card-image class="cursor-pointer w-64 h-48" [src]="cfImageURL(d.photo || 'agriculture')"
+          [alt]="d.name + ' icon'" [routerLink]="[d.id]">
+      </div>
+
+      <div class="pl-4 pt-1">
+        <mat-chip-listbox aria-label="asset-tags">
+          @for (t of d.tags; track t) {
+          <mat-chip-option>{{ t }}</mat-chip-option>
+          }
+        </mat-chip-listbox>
+      </div>
+
+      <div class="p-4">
+        <div class="flex justify-between">
+          <span><i class="fa-solid fa-bangladeshi-taka-sign"></i>{{ d.acquisition_cost | number }}</span>
+          <span><i class="fa-solid fa-bangladeshi-taka-sign"></i>{{ d.current_price || d.sold_price | number }}</span>
+        </div>
+
+        <mat-progress-bar mode="determinate" [value]="growthRate(d)"></mat-progress-bar>
+
+        <div class="flex justify-between">
+          <span>{{ d.date_acquired | date }}</span>
+          <span>{{ d.date_sold || today | date }}</span>
+        </div>
+      </div>
+
+      <mat-card-actions align="end">
+        <button mat-button [routerLink]="[d.id]">RESERVE</button>
+        <button mat-button disabled>SHARE</button>
+      </mat-card-actions>
+    </mat-card>
+    }
+
+  </div>
+  } @else if(viewMode === 'list') {
+  <div class="p-4">
+    <ng-expandable-table [data]="assets()" [columns]="columns" [cellDefs]="cellDefs"
+      [expandedDetailContent]="customDetailTemplate" (currentRowChanged)="handleRowChange($event)">
+    </ng-expandable-table>
+
+    <ng-template #customDetailTemplate let-rowData>
+      @if (rowData) {
+      <div class="element-description">
+        <div class="flex flex-wrap gap-4 p-2">
+          <button mat-raised-button class="btn-lg text-lg rounded-none" color="primary" [routerLink]="[rowData.id]">
+            <mat-icon>apps</mat-icon>
+            <span>RESERVE</span>
+          </button>
+
+          <button mat-raised-button class="btn-lg text-lg rounded-none" color="primary"
+            [routerLink]="[rowData.id, 'edit']">
+            <mat-icon>settings</mat-icon>
+            <span>MANAGE</span>
+          </button>
+
+          <button mat-raised-button class="btn-lg text-lg rounded-none" color="primary" (click)="toggleDetails()">
+            <mat-icon>data_object</mat-icon>
+            <span>DETAILS</span>
+          </button>
+        </div>
+      </div>
+
+      @if (isShowDetails) {
+      <ng-editor [inputText]="rowData | json" [mode]="'json'" [isReadOnly]="true"></ng-editor>
+      }
+      }
+    </ng-template>
+  </div>
+  }
+  } @else if(assets() === null) {
+  <div class="center" style="height: 50vh;">
+    <mat-spinner></mat-spinner>
+  </div>
+  }
+
+</section>
