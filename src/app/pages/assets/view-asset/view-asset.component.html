@@ -1,1 +1,41 @@
 <pre><code>{{ asset | json }}</code></pre>
+@if(asset) {
+<div class="flex flex-row flex-wrap gap-4 p-8 center">
+    <mat-card [style.width.px]="400" [style.height.px]="400">
+        <mat-card-header class="h-24 flex-row justify-between">
+            <mat-card-title>{{ asset.name }}</mat-card-title>
+        <mat-card-subtitle>{{ asset.description }}</mat-card-subtitle>
+        <div>
+          <button mat-raised-button color="primary" [routerLink]="['edit']">Edit</button>
+        </div> 
+        </mat-card-header>
+        <div class="w-full center">
+            <img mat-card-image class="cursor-pointer w-64 h-48" [src]="cfImageURL(asset?.photo || 'agriculture')"
+              [alt]="asset.name + ' icon'" >
+          </div>
+    <div class="pl-4 pt-1 center">
+        <mat-chip-listbox aria-label="asset-tags">
+          @for (t of asset.tags; track t) {
+          <mat-chip-option>{{ t }}</mat-chip-option>
+          }
+        </mat-chip-listbox>
+      </div>    
+      <div class="p-4">
+        <div class="flex justify-between">
+          <span><i class="fa-solid fa-bangladeshi-taka-sign"></i>{{ asset.acquisition_cost | number }}</span>
+          <span><i class="fa-solid fa-bangladeshi-taka-sign"></i>{{ asset.current_price || asset.sold_price | number }}</span>
+        </div>     
+        
+            <mat-progress-bar mode="determinate" [value]="growthRate(asset)"></mat-progress-bar>
+        <div class="flex justify-between">
+          <span>{{ asset.date_acquired | date }}</span>
+          <span>{{ asset.date_sold || today | date }}</span>
+        </div>
+      </div>
+    </mat-card>
+</div>
+}  @else {
+    <div class="center" style="height: 50vh;">
+      <mat-spinner></mat-spinner>
+    </div>
+    }

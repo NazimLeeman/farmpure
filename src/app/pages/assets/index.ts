@@ -12,8 +12,8 @@ export const ASSET_ROUTES: Routes = [
 			{
 				path: ":id/edit",
 				loadComponent: () =>
-					import("./view-asset/view-asset.component").then(
-						(m) => m.ViewAssetComponent,
+					import("./edit-asset/edit-asset.component").then(
+						(m) => m.EditAssetComponent,
 					),
 			},
 			{

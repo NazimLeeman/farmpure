@@ -1,0 +1,541 @@
+{
+  "version": "6.0",
+  "nxVersion": "18.2.3",
+  "deps": {
+    "@angular/animations": "^17.3.0",
+    "@angular/cdk": "^17.3.3",
+    "@angular/common": "^17.3.0",
+    "@angular/compiler": "^17.3.0",
+    "@angular/core": "^17.3.0",
+    "@angular/forms": "^17.3.0",
+    "@angular/material": "^17.3.3",
+    "@angular/platform-browser": "^17.3.0",
+    "@angular/platform-browser-dynamic": "^17.3.0",
+    "@angular/router": "^17.3.0",
+    "ace-builds": "^1.32.9",
+    "js-yaml": "^4.1.0",
+    "marked": "^12.0.1",
+    "mermaid": "^10.9.0",
+    "ngx-echarts": "^17.1.0",
+    "ngx-mqtt": "^17.0.0",
+    "oidc-client-ts": "^3.0.1",
+    "reveal.js": "^5.0.5",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.14.3",
+    "@angular-devkit/build-angular": "^17.3.3",
+    "@angular-eslint/builder": "17.3.0",
+    "@angular-eslint/eslint-plugin": "17.3.0",
+    "@angular-eslint/eslint-plugin-template": "17.3.0",
+    "@angular-eslint/schematics": "17.3.0",
+    "@angular-eslint/template-parser": "17.3.0",
+    "@angular/cli": "^17.3.3",
+    "@angular/compiler-cli": "^17.3.0",
+    "@types/jasmine": "~5.1.0",
+    "@types/reveal.js": "^5.0.3",
+    "@typescript-eslint/eslint-plugin": "7.2.0",
+    "@typescript-eslint/parser": "7.2.0",
+    "autoprefixer": "^10.4.19",
+    "eslint": "^8.57.0",
+    "jasmine-core": "~5.1.0",
+    "karma": "~6.4.0",
+    "karma-chrome-launcher": "~3.2.0",
+    "karma-coverage": "~2.2.0",
+    "karma-jasmine": "~5.1.0",
+    "karma-jasmine-html-reporter": "~2.1.0",
+    "ng-packagr": "^17.3.0",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.3",
+    "typescript": "~5.4.2"
+  },
+  "pathMappings": {
+    "@app/*": [
+      "src/app/*"
+    ],
+    "@core/*": [
+      "src/app/core/*"
+    ],
+    "@env": [
+      "src/environments/environment.ts"
+    ],
+    "@shared/*": [
+      "src/app/shared/*"
+    ],
+    "ng-essential": [
+      "./dist/ng-essential"
+    ],
+    "ng-oidc": [
+      "./dist/ng-oidc"
+    ]
+  },
+  "nxJsonPlugins": [],
+  "fileMap": {
+    "projectFileMap": {},
+    "nonProjectFiles": [
+      {
+        "file": ".editorconfig",
+        "hash": "17241496168097493888"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "4689145951703824387"
+      },
+      {
+        "file": ".vscode/extensions.json",
+        "hash": "11934160580685414355"
+      },
+      {
+        "file": ".vscode/launch.json",
+        "hash": "17406702432687230417"
+      },
+      {
+        "file": ".vscode/tasks.json",
+        "hash": "10093397977228577162"
+      },
+      {
+        "file": "README.md",
+        "hash": "4230981986435550555"
+      },
+      {
+        "file": "angular.json",
+        "hash": "2979143320792058216"
+      },
+      {
+        "file": "docs/init.md",
+        "hash": "13769052071611085565"
+      },
+      {
+        "file": "docs/lib.md",
+        "hash": "11016777142640902114"
+      },
+      {
+        "file": "package-lock.json",
+        "hash": "14486747173741817692"
+      },
+      {
+        "file": "package.json",
+        "hash": "15312096893800909938"
+      },
+      {
+        "file": "projects/ng-essential/README.md",
+        "hash": "13302267713151481622"
+      },
+      {
+        "file": "projects/ng-essential/ng-package.json",
+        "hash": "17354565858533679516"
+      },
+      {
+        "file": "projects/ng-essential/package.json",
+        "hash": "16700636055058785652"
+      },
+      {
+        "file": "projects/ng-essential/src/lib/components/confirm-delete-dialog/confirm-delete-dialog.component.css",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "projects/ng-essential/src/lib/components/confirm-delete-dialog/confirm-delete-dialog.component.html",
+        "hash": "6669007754859508469"
+      },
+      {
+        "file": "projects/ng-essential/src/lib/components/confirm-delete-dialog/confirm-delete-dialog.component.ts",
+        "hash": "3557656407560659150"
+      },
+      {
+        "file": "projects/ng-essential/src/lib/components/editor/editor.component.css",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "projects/ng-essential/src/lib/components/editor/editor.component.html",
+        "hash": "5870984922792428259"
+      },
+      {
+        "file": "projects/ng-essential/src/lib/components/editor/editor.component.ts",
+        "hash": "17001033437131874485"
+      },
+      {
+        "file": "projects/ng-essential/src/lib/components/expandable-table/expandable-table.component.css",
+        "hash": "10316095278226731610"
+      },
+      {
+        "file": "projects/ng-essential/src/lib/components/expandable-table/expandable-table.component.html",
+        "hash": "15247754775642669066"
+      },
+      {
+        "file": "projects/ng-essential/src/lib/components/expandable-table/expandable-table.component.ts",
+        "hash": "6240688905517622000"
+      },
+      {
+        "file": "projects/ng-essential/src/lib/components/expandable-table/table.pipe.ts",
+        "hash": "320430360471336536"
+      },
+      {
+        "file": "projects/ng-essential/src/lib/components/expandable-table/timeago.pipe.ts",
+        "hash": "3367137281806708074"
+      },
+      {
+        "file": "projects/ng-essential/src/lib/components/reveal/reveal.component.html",
+        "hash": "12354574347147289163"
+      },
+      {
+        "file": "projects/ng-essential/src/lib/components/reveal/reveal.component.spec.ts",
+        "hash": "3646738267899621592"
+      },
+      {
+        "file": "projects/ng-essential/src/lib/components/reveal/reveal.component.ts",
+        "hash": "5924761912211773845"
+      },
+      {
+        "file": "projects/ng-essential/src/public-api.ts",
+        "hash": "11663979393513097493"
+      },
+      {
+        "file": "projects/ng-essential/tsconfig.lib.json",
+        "hash": "3854248313799891276"
+      },
+      {
+        "file": "projects/ng-essential/tsconfig.lib.prod.json",
+        "hash": "6958467553555132988"
+      },
+      {
+        "file": "projects/ng-essential/tsconfig.spec.json",
+        "hash": "6187331034101419811"
+      },
+      {
+        "file": "projects/ng-oidc/README.md",
+        "hash": "3099674387794749360"
+      },
+      {
+        "file": "projects/ng-oidc/ng-package.json",
+        "hash": "2244902858326308517"
+      },
+      {
+        "file": "projects/ng-oidc/package.json",
+        "hash": "7300413227669937635"
+      },
+      {
+        "file": "projects/ng-oidc/src/lib/auth-token.interceptor.ts",
+        "hash": "8312330397326931275"
+      },
+      {
+        "file": "projects/ng-oidc/src/lib/auth.service.spec.ts",
+        "hash": "6927655796975040699"
+      },
+      {
+        "file": "projects/ng-oidc/src/lib/auth.service.ts",
+        "hash": "793931305289818070"
+      },
+      {
+        "file": "projects/ng-oidc/src/lib/oidc-config.token.ts",
+        "hash": "17835743313398662611"
+      },
+      {
+        "file": "projects/ng-oidc/src/public-api.ts",
+        "hash": "17341571970698988892"
+      },
+      {
+        "file": "projects/ng-oidc/tsconfig.lib.json",
+        "hash": "3854248313799891276"
+      },
+      {
+        "file": "projects/ng-oidc/tsconfig.lib.prod.json",
+        "hash": "6958467553555132988"
+      },
+      {
+        "file": "projects/ng-oidc/tsconfig.spec.json",
+        "hash": "6187331034101419811"
+      },
+      {
+        "file": "proxy-config.json",
+        "hash": "5530559592737085846"
+      },
+      {
+        "file": "sql/0001_create_user_profiles_table.up.sql",
+        "hash": "8863929078313906181"
+      },
+      {
+        "file": "sql/0002_create_organizations_table.up.sql",
+        "hash": "2729821036813742661"
+      },
+      {
+        "file": "sql/0003_create_assets_table.up.sql",
+        "hash": "3164388974133090681"
+      },
+      {
+        "file": "src/app/app.component.html",
+        "hash": "14604522633118712086"
+      },
+      {
+        "file": "src/app/app.component.scss",
+        "hash": "17387936015920884525"
+      },
+      {
+        "file": "src/app/app.component.spec.ts",
+        "hash": "10581966786138319177"
+      },
+      {
+        "file": "src/app/app.component.ts",
+        "hash": "6747605509613399746"
+      },
+      {
+        "file": "src/app/app.config.ts",
+        "hash": "6659830667171363931"
+      },
+      {
+        "file": "src/app/app.routes.ts",
+        "hash": "8167976921793599272"
+      },
+      {
+        "file": "src/app/core/app.service.ts",
+        "hash": "11637057824746803567"
+      },
+      {
+        "file": "src/app/core/auth/auth.config.ts",
+        "hash": "14169233614912551231"
+      },
+      {
+        "file": "src/app/core/auth/index.ts",
+        "hash": "7906482298412912079"
+      },
+      {
+        "file": "src/app/core/auth/login-callback/login-callback.component.ts",
+        "hash": "9961625133601423965"
+      },
+      {
+        "file": "src/app/core/auth/logout-callback/logout-callback.component.ts",
+        "hash": "2959951594694850787"
+      },
+      {
+        "file": "src/app/core/error-handler.service.ts",
+        "hash": "3007219630641129354"
+      },
+      {
+        "file": "src/app/core/http-error.interceptor.ts",
+        "hash": "8851991092802795783"
+      },
+      {
+        "file": "src/app/core/index.ts",
+        "hash": "1161951370699396707"
+      },
+      {
+        "file": "src/app/pages/account/account.component.html",
+        "hash": "3715160080906197960"
+      },
+      {
+        "file": "src/app/pages/account/account.component.spec.ts",
+        "hash": "2332766849979963952"
+      },
+      {
+        "file": "src/app/pages/account/account.component.ts",
+        "hash": "7422809983418771"
+      },
+      {
+        "file": "src/app/pages/account/index.ts",
+        "hash": "3779549630752926981"
+      },
+      {
+        "file": "src/app/pages/assets/assets.component.html",
+        "hash": "3974304917754612689"
+      },
+      {
+        "file": "src/app/pages/assets/assets.component.spec.ts",
+        "hash": "14770251144251454092"
+      },
+      {
+        "file": "src/app/pages/assets/assets.component.ts",
+        "hash": "5945106131391353571"
+      },
+      {
+        "file": "src/app/pages/assets/edit-asset/edit-asset.component.html",
+        "hash": "10248018176259544480"
+      },
+      {
+        "file": "src/app/pages/assets/edit-asset/edit-asset.component.ts",
+        "hash": "1107499509277266837"
+      },
+      {
+        "file": "src/app/pages/assets/index.ts",
+        "hash": "16988127951469702134"
+      },
+      {
+        "file": "src/app/pages/assets/list-assets/list-assets.component.html",
+        "hash": "6972745646085167991"
+      },
+      {
+        "file": "src/app/pages/assets/list-assets/list-assets.component.ts",
+        "hash": "4018446199942022716"
+      },
+      {
+        "file": "src/app/pages/assets/view-asset/view-asset.component.html",
+        "hash": "9540812694920112543"
+      },
+      {
+        "file": "src/app/pages/assets/view-asset/view-asset.component.ts",
+        "hash": "8190062302071487174"
+      },
+      {
+        "file": "src/app/pages/farms/edit-farm/edit-farm.component.html",
+        "hash": "14822302402437272096"
+      },
+      {
+        "file": "src/app/pages/farms/edit-farm/edit-farm.component.ts",
+        "hash": "11737372274875445158"
+      },
+      {
+        "file": "src/app/pages/farms/farms.component.html",
+        "hash": "12398068255731381955"
+      },
+      {
+        "file": "src/app/pages/farms/farms.component.spec.ts",
+        "hash": "845576140536901742"
+      },
+      {
+        "file": "src/app/pages/farms/farms.component.ts",
+        "hash": "10062245259429348416"
+      },
+      {
+        "file": "src/app/pages/farms/index.ts",
+        "hash": "3935966253625549938"
+      },
+      {
+        "file": "src/app/pages/farms/list-farms/list-farms.component.html",
+        "hash": "17304834815801622141"
+      },
+      {
+        "file": "src/app/pages/farms/list-farms/list-farms.component.ts",
+        "hash": "8867528208517918458"
+      },
+      {
+        "file": "src/app/pages/farms/view-farm/view-farm.component.html",
+        "hash": "14822302402437272096"
+      },
+      {
+        "file": "src/app/pages/farms/view-farm/view-farm.component.ts",
+        "hash": "8067748908395243513"
+      },
+      {
+        "file": "src/app/pages/public/about/about.component.html",
+        "hash": "14884942496292954897"
+      },
+      {
+        "file": "src/app/pages/public/about/about.component.ts",
+        "hash": "7102962032019125512"
+      },
+      {
+        "file": "src/app/pages/public/contact/contact.component.html",
+        "hash": "10810050765039054656"
+      },
+      {
+        "file": "src/app/pages/public/contact/contact.component.ts",
+        "hash": "15305240205316485613"
+      },
+      {
+        "file": "src/app/pages/public/index.ts",
+        "hash": "7974983285701634785"
+      },
+      {
+        "file": "src/app/pages/public/index/index.component.html",
+        "hash": "7726067840757043423"
+      },
+      {
+        "file": "src/app/pages/public/index/index.component.ts",
+        "hash": "587890655029601791"
+      },
+      {
+        "file": "src/app/shared/components/icon-text.component.ts",
+        "hash": "8861823029001668970"
+      },
+      {
+        "file": "src/app/shared/components/index.ts",
+        "hash": "12873718388797763351"
+      },
+      {
+        "file": "src/app/shared/interfaces/asset.ts",
+        "hash": "8403495227908409479"
+      },
+      {
+        "file": "src/app/shared/interfaces/entity.ts",
+        "hash": "15394222047694207095"
+      },
+      {
+        "file": "src/app/shared/interfaces/index.ts",
+        "hash": "9180028920156499519"
+      },
+      {
+        "file": "src/app/shared/interfaces/organization.ts",
+        "hash": "6217321807577083778"
+      },
+      {
+        "file": "src/app/shared/services/farm.service.ts",
+        "hash": "5318056653238757557"
+      },
+      {
+        "file": "src/app/shared/services/index.ts",
+        "hash": "4657700450742471956"
+      },
+      {
+        "file": "src/app/shared/services/pg.service.ts",
+        "hash": "6367217330886709910"
+      },
+      {
+        "file": "src/app/shared/utils/animations.ts",
+        "hash": "10519147670705179621"
+      },
+      {
+        "file": "src/app/shared/utils/cf-image-url.ts",
+        "hash": "5555509429903054163"
+      },
+      {
+        "file": "src/app/shared/utils/index.ts",
+        "hash": "14174663963064610562"
+      },
+      {
+        "file": "src/app/shared/utils/mat-icon.ts",
+        "hash": "15308244066462276697"
+      },
+      {
+        "file": "src/assets/.gitkeep",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/environments/environment.development.ts",
+        "hash": "9018344628426568770"
+      },
+      {
+        "file": "src/environments/environment.ts",
+        "hash": "1715020528963319624"
+      },
+      {
+        "file": "src/favicon.ico",
+        "hash": "3988961587069885523"
+      },
+      {
+        "file": "src/index.html",
+        "hash": "13702660717147183338"
+      },
+      {
+        "file": "src/main.ts",
+        "hash": "4169901790405087765"
+      },
+      {
+        "file": "src/styles.scss",
+        "hash": "5662584555129096063"
+      },
+      {
+        "file": "tailwind.config.js",
+        "hash": "328943830158504267"
+      },
+      {
+        "file": "tsconfig.app.json",
+        "hash": "13119632651406065538"
+      },
+      {
+        "file": "tsconfig.json",
+        "hash": "16536659379304907699"
+      },
+      {
+        "file": "tsconfig.spec.json",
+        "hash": "5122839733245053999"
+      }
+    ]
+  }
+}
